@@ -1,0 +1,12 @@
+# IDE Settings
+.vscode/
+.idea/
+
+# Backend (Java/Spring Boot)
+lifeline-backend/target/
+lifeline-backend/src/main/resources/application.properties
+*.class
+
+# Frontend (React/Node)
+lifeline-frontend/dist/
+lifeline-frontend/node_modules/

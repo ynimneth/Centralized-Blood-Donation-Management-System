@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLine - Team File Ownership</title>
+    <style>
+        :root {
+            --primary: #c0392b;
+            --secondary: #2c3e50;
+            --bg-light: #f8f9fa;
+            --border: #dee2e6;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: #f0f2f5;
+        }
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        .member-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .member-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .member-name {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .badge-id {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        .module-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+        h3 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 520px;
+        }
+        th, td {
+            border-bottom: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+        th {
+            background-color: var(--bg-light);
+            color: var(--secondary);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85em;
+            color: #d63031;
+            word-break: break-all;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0.5rem; }
+            .member-card { padding: 1rem; }
+            .member-name { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LifeLine Project Team</h1>
+    <div class="subtitle">Team Structure, Responsibilities, and File Ownership (Frontend + Backend)</div>
+
+    <div class="member-card">
+        <div class="member-header">
+            <h2 class="member-name">Tharmithan S. <span class="badge-id">IT24103121</span></h2>
+            <p class="module-title">Module: Appointment &amp; Scheduling</p>
+        </div>
+
+        <h3>Frontend (React/Vite)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>Appointments.jsx</code></td><td><code>src/pages/Appointments.jsx</code></td><td>View and manage donor appointments</td></tr>
+                <tr><td><code>BookAppointment.jsx</code></td><td><code>src/pages/BookAppointment.jsx</code></td><td>Appointment booking flow for donors</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend (Spring Boot)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package</th><th>Description</th></tr>
+                <tr><td><code>AppointmentController.java</code></td><td><code>controller</code></td><td>REST endpoints for appointment CRUD</td></tr>
+                <tr><td><code>AppointmentService.java</code></td><td><code>service</code></td><td>Business logic for booking and scheduling</td></tr>
+                <tr><td><code>AppointmentRepository.java</code></td><td><code>repository</code></td><td>Database queries for appointments</td></tr>
+                <tr><td><code>Appointment.java</code></td><td><code>model</code></td><td>Appointment entity and data model</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-header">
+            <h2 class="member-name">Hansani W.G.H.H <span class="badge-id">IT24103762</span></h2>
+            <p class="module-title">Module: Emergency Request &amp; Matching</p>
+        </div>
+
+        <h3>Frontend (React/Vite)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>EmergencyRequests.jsx</code></td><td><code>src/pages/EmergencyRequests.jsx</code></td><td>Admin view for managing emergency blood requests</td></tr>
+                <tr><td><code>EmergencyAlerts.jsx</code></td><td><code>src/pages/EmergencyAlerts.jsx</code></td><td>Alerts for incoming emergency requests</td></tr>
+                <tr><td><code>Hospitals.jsx</code></td><td><code>src/pages/Hospitals.jsx</code></td><td>Hospital listing and blood availability view</td></tr>
+                <tr><td><code>HospitalRequests.jsx</code></td><td><code>src/pages/HospitalRequests.jsx</code></td><td>Hospital-side blood request management</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend (Spring Boot)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package</th><th>Description</th></tr>
+                <tr><td><code>EmergencyController.java</code></td><td><code>controller</code></td><td>REST endpoints for emergency requests</td></tr>
+                <tr><td><code>HospitalController.java</code></td><td><code>controller</code></td><td>REST endpoints for hospital blood operations</td></tr>
+                <tr><td><code>HospitalRequestController.java</code></td><td><code>controller</code></td><td>REST endpoints for hospital blood requests</td></tr>
+                <tr><td><code>EmergencyRequestService.java</code></td><td><code>service</code></td><td>Matching logic and emergency handling</td></tr>
+                <tr><td><code>HospitalService.java</code></td><td><code>service</code></td><td>Hospital operations and fulfillment logic</td></tr>
+                <tr><td><code>HospitalBloodRequestService.java</code></td><td><code>service</code></td><td>Business logic for hospital requests</td></tr>
+                <tr><td><code>BloodDispatchService.java</code></td><td><code>service</code></td><td>Blood unit dispatch and allocation logic</td></tr>
+                <tr><td><code>EmergencyRequestRepository.java</code></td><td><code>repository</code></td><td>Database queries for emergency records</td></tr>
+                <tr><td><code>HospitalRepository.java</code></td><td><code>repository</code></td><td>Database queries for hospitals</td></tr>
+                <tr><td><code>HospitalBloodRequestRepository.java</code></td><td><code>repository</code></td><td>Database queries for hospital requests</td></tr>
+                <tr><td><code>EmergencyRequest.java</code></td><td><code>model</code></td><td>Emergency request entity</td></tr>
+                <tr><td><code>Hospital.java</code></td><td><code>model</code></td><td>Hospital entity</td></tr>
+                <tr><td><code>HospitalBloodRequest.java</code></td><td><code>model</code></td><td>Hospital blood request entity</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-header">
+            <h2 class="member-name">Peiris A.M.A.B <span class="badge-id">IT24102477</span></h2>
+            <p class="module-title">Module: Donor Eligibility &amp; History</p>
+        </div>
+
+        <h3>Frontend (React/Vite)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>DonorEligibility.jsx</code></td><td><code>src/pages/DonorEligibility.jsx</code></td><td>Eligibility check flow for donors</td></tr>
+                <tr><td><code>DonorDashboard.jsx</code></td><td><code>src/pages/DonorDashboard.jsx</code></td><td>Donor profile and history dashboard</td></tr>
+                <tr><td><code>HealthQuestionnaire.jsx</code></td><td><code>src/components/HealthQuestionnaire.jsx</code></td><td>Pre-donation health questionnaire UI</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend (Spring Boot)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package</th><th>Description</th></tr>
+                <tr><td><code>DonorController.java</code></td><td><code>controller</code></td><td>REST endpoints for donor profile and eligibility</td></tr>
+                <tr><td><code>DonorService.java</code></td><td><code>service</code></td><td>Donor management business logic</td></tr>
+                <tr><td><code>EligibilityService.java</code></td><td><code>service</code></td><td>Eligibility rule-checking logic</td></tr>
+                <tr><td><code>DonorRepository.java</code></td><td><code>repository</code></td><td>Database queries for donor records</td></tr>
+                <tr><td><code>Donor.java</code></td><td><code>model</code></td><td>Donor entity</td></tr>
+                <tr><td><code>HealthHistory.java</code></td><td><code>model</code></td><td>Donor health history entity</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-header">
+            <h2 class="member-name">Nimneth P.B.Y <span class="badge-id">IT24100304</span></h2>
+            <p class="module-title">Module: Donation Camp &amp; Event Management</p>
+        </div>
+
+        <h3>Frontend (React/Vite)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>CampMap.jsx</code></td><td><code>src/pages/CampMap.jsx</code></td><td>Interactive map for donation camps</td></tr>
+                <tr><td><code>Dashboard.jsx</code></td><td><code>src/pages/Dashboard.jsx</code></td><td>Camp and event overview dashboard</td></tr>
+                <tr><td><code>Dashboard.css</code></td><td><code>src/pages/Dashboard.css</code></td><td>Styles for dashboard page</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend (Spring Boot)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package</th><th>Description</th></tr>
+                <tr><td><code>CampController.java</code></td><td><code>controller</code></td><td>REST endpoints for camp management</td></tr>
+                <tr><td><code>CampService.java</code></td><td><code>service</code></td><td>Business logic for camps and events</td></tr>
+                <tr><td><code>CampRepository.java</code></td><td><code>repository</code></td><td>Database queries for camps</td></tr>
+                <tr><td><code>Camp.java</code></td><td><code>model</code></td><td>Camp entity</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-header">
+            <h2 class="member-name">Kalanchige I.R <span class="badge-id">IT24101991</span></h2>
+            <p class="module-title">Module: Lab Testing &amp; QC</p>
+        </div>
+
+        <h3>Frontend (React/Vite)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>LabDashboard.jsx</code></td><td><code>src/pages/LabDashboard.jsx</code></td><td>Lab technician dashboard for test workflows</td></tr>
+                <tr><td><code>LabTestModal.jsx</code></td><td><code>src/pages/LabTestModal.jsx</code></td><td>Modal for recording blood test results</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend (Spring Boot)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package</th><th>Description</th></tr>
+                <tr><td><code>ActivityController.java</code></td><td><code>controller</code></td><td>REST endpoints for lab activity logs</td></tr>
+                <tr><td><code>ActivityService.java</code></td><td><code>service</code></td><td>Activity logging and QC processing</td></tr>
+                <tr><td><code>SafetyValidationService.java</code></td><td><code>service</code></td><td>Blood safety and quality validation</td></tr>
+                <tr><td><code>ActivityRepository.java</code></td><td><code>repository</code></td><td>Database queries for activity logs</td></tr>
+                <tr><td><code>LabTestResultRepository.java</code></td><td><code>repository</code></td><td>Database queries for lab tests</td></tr>
+                <tr><td><code>ActivityLog.java</code></td><td><code>model</code></td><td>Activity log entity</td></tr>
+                <tr><td><code>LabTestResult.java</code></td><td><code>model</code></td><td>Lab test result entity</td></tr>
+                <tr><td><code>BloodTestResult.java</code></td><td><code>model</code></td><td>Blood test result entity</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-header">
+            <h2 class="member-name">Hapuarachchige K.S <span class="badge-id">IT24102336</span></h2>
+            <p class="module-title">Module: Blood Inventory &amp; Stock</p>
+        </div>
+
+        <h3>Frontend (React/Vite)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>Inventory.jsx</code></td><td><code>src/pages/Inventory.jsx</code></td><td>Blood inventory overview page</td></tr>
+                <tr><td><code>InventoryDashboard.jsx</code></td><td><code>src/pages/InventoryDashboard.jsx</code></td><td>Detailed inventory management dashboard</td></tr>
+                <tr><td><code>Inventory.css</code></td><td><code>src/pages/Inventory.css</code></td><td>Styles for inventory pages</td></tr>
+                <tr><td><code>StockDashboard.jsx</code></td><td><code>src/components/StockDashboard.jsx</code></td><td>Stock levels and alert summary component</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend (Spring Boot)</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package</th><th>Description</th></tr>
+                <tr><td><code>InventoryController.java</code></td><td><code>controller</code></td><td>REST endpoints for inventory management</td></tr>
+                <tr><td><code>InventoryService.java</code></td><td><code>service</code></td><td>Inventory business logic</td></tr>
+                <tr><td><code>StockService.java</code></td><td><code>service</code></td><td>Stock level tracking and alerts</td></tr>
+                <tr><td><code>InventoryRepository.java</code></td><td><code>repository</code></td><td>Database queries for inventory</td></tr>
+                <tr><td><code>Inventory.java</code></td><td><code>model</code></td><td>Inventory entity</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="member-card" style="border: 2px dashed #6c757d;">
+        <div class="member-header" style="border-bottom-color: #6c757d;">
+            <h2 class="member-name" style="color: #495057;">Shared / Common Files</h2>
+            <p class="module-title" style="color: #6c757d;">Maintained collectively by the team</p>
+        </div>
+
+        <h3>Frontend Shared</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>App.jsx</code></td><td><code>src/App.jsx</code></td><td>Root application routing</td></tr>
+                <tr><td><code>App.css</code></td><td><code>src/App.css</code></td><td>Global app styles</td></tr>
+                <tr><td><code>main.jsx</code></td><td><code>src/main.jsx</code></td><td>Application entry point</td></tr>
+                <tr><td><code>index.css</code></td><td><code>src/index.css</code></td><td>Global CSS/base styles</td></tr>
+                <tr><td><code>Login.jsx</code></td><td><code>src/pages/Login.jsx</code></td><td>User login page</td></tr>
+                <tr><td><code>Login.css</code></td><td><code>src/pages/Login.css</code></td><td>Styles for login page</td></tr>
+                <tr><td><code>Register.jsx</code></td><td><code>src/pages/Register.jsx</code></td><td>User registration page</td></tr>
+                <tr><td><code>CredentialManagement.jsx</code></td><td><code>src/pages/CredentialManagement.jsx</code></td><td>User credential administration</td></tr>
+                <tr><td><code>AuthContext.jsx</code></td><td><code>src/context/AuthContext.jsx</code></td><td>Authentication state provider</td></tr>
+                <tr><td><code>ProtectedRoute.jsx</code></td><td><code>src/components/ProtectedRoute.jsx</code></td><td>Route guard for protected pages</td></tr>
+                <tr><td><code>Chatbot.jsx</code></td><td><code>src/components/Chatbot.jsx</code></td><td>Assistant chatbot UI component</td></tr>
+                <tr><td><code>permissions.js</code></td><td><code>src/constants/permissions.js</code></td><td>Role-based permission mapping</td></tr>
+                <tr><td><code>locationData.js</code></td><td><code>src/constants/locationData.js</code></td><td>Location constants used across pages</td></tr>
+                <tr><td><code>api.js</code></td><td><code>src/services/api.js</code></td><td>Axios API client configuration</td></tr>
+                <tr><td><code>donorportal.jpg</code></td><td><code>src/assets/donorportal.jpg</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>shedule.jpg</code></td><td><code>src/assets/shedule.jpg</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>camps.jpg</code></td><td><code>src/assets/camps.jpg</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>Credential.jpg</code></td><td><code>src/assets/Credential.jpg</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>hospitals.jpg</code></td><td><code>src/assets/hospitals.jpg</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>emergency.jpg</code></td><td><code>src/assets/emergency.jpg</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>inventory.png</code></td><td><code>src/assets/inventory.png</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>lab.png</code></td><td><code>src/assets/lab.png</code></td><td>Shared frontend asset</td></tr>
+                <tr><td><code>loginpage.png</code></td><td><code>src/assets/loginpage.png</code></td><td>Shared frontend asset</td></tr>
+            </table>
+        </div>
+
+        <h3>Backend Shared</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Package / Path</th><th>Description</th></tr>
+                <tr><td><code>AuthController.java</code></td><td><code>controller</code></td><td>User login and registration endpoints</td></tr>
+                <tr><td><code>AdminUserController.java</code></td><td><code>controller</code></td><td>Admin user management endpoints</td></tr>
+                <tr><td><code>ChatbotController.java</code></td><td><code>controller</code></td><td>Chat assistant API endpoint</td></tr>
+                <tr><td><code>ChatbotService.java</code></td><td><code>service</code></td><td>Chatbot response logic</td></tr>
+                <tr><td><code>ChatRequest.java</code></td><td><code>dto</code></td><td>Request DTO for chatbot API</td></tr>
+                <tr><td><code>ChatResponse.java</code></td><td><code>dto</code></td><td>Response DTO for chatbot API</td></tr>
+                <tr><td><code>User.java</code></td><td><code>model</code></td><td>User entity with auth roles</td></tr>
+                <tr><td><code>UserRepository.java</code></td><td><code>repository</code></td><td>Database queries for user accounts</td></tr>
+                <tr><td><code>CorsConfig.java</code></td><td><code>config</code></td><td>CORS setup for frontend-backend communication</td></tr>
+                <tr><td><code>DataLoader.java</code></td><td><code>config</code></td><td>Startup seed data loader</td></tr>
+                <tr><td><code>RoleColumnMigration.java</code></td><td><code>config</code></td><td>Role column migration utility</td></tr>
+                <tr><td><code>LifeLineApplication.java</code></td><td><code>root</code></td><td>Spring Boot application entry point</td></tr>
+                <tr><td><code>application.properties</code></td><td><code>resources</code></td><td>App and DB configuration</td></tr>
+                <tr><td><code>pom.xml</code></td><td><code>lifeline-backend/</code></td><td>Maven dependencies and build config</td></tr>
+            </table>
+        </div>
+
+        <h3>Project-Level Shared</h3>
+        <div class="table-responsive">
+            <table>
+                <tr><th>File</th><th>Path</th><th>Description</th></tr>
+                <tr><td><code>README.md</code></td><td><code>LifeLine_Project/README.md</code></td><td>Project setup and overview</td></tr>
+                <tr><td><code>DEVELOPER_GUIDE.md</code></td><td><code>LifeLine_Project/DEVELOPER_GUIDE.md</code></td><td>Developer runbook and environment guide</td></tr>
+                <tr><td><code>loginpage.png</code></td><td><code>LifeLine_Project/loginpage.png</code></td><td>Top-level shared project asset</td></tr>
+                <tr><td><code>index.html</code></td><td><code>lifeline-frontend/index.html</code></td><td>Vite HTML entry template</td></tr>
+                <tr><td><code>package.json</code></td><td><code>lifeline-frontend/package.json</code></td><td>Frontend dependencies and scripts</td></tr>
+                <tr><td><code>package-lock.json</code></td><td><code>lifeline-frontend/package-lock.json</code></td><td>NPM dependency lockfile</td></tr>
+                <tr><td><code>vite.config.js</code></td><td><code>lifeline-frontend/vite.config.js</code></td><td>Vite dev/build configuration</td></tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
