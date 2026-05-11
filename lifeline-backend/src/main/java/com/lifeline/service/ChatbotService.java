@@ -28,7 +28,7 @@ public class ChatbotService {
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
-    @Value("${groq.api.key}")
+    @Value("${groq.api.key:}")
     private String groqApiKey;
 
     public ChatbotService(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
@@ -40,6 +40,10 @@ public class ChatbotService {
         String normalizedMessage = userMessage == null ? "" : userMessage.trim();
         if (normalizedMessage.isBlank()) {
             return "Please enter a message so I can help.";
+        }
+
+        if (groqApiKey == null || groqApiKey.isBlank()) {
+            return buildFallbackReply(normalizedMessage);
         }
 
         try {

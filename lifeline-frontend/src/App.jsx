@@ -16,6 +16,7 @@ import Hospitals from './pages/Hospitals';
 import CredentialManagement from './pages/CredentialManagement';
 import PublicDetails from './pages/PublicDetails';
 import PublicSectionPage from './pages/PublicSectionPage';
+import TransportManagement from './pages/TransportManagement';
 import Chatbot from './components/Chatbot';
 import './App.css';
 
@@ -98,6 +99,12 @@ function App() {
                     <Route path="/hospitals" element={
                         <ProtectedRoute roles={['ADMIN']}>
                             <Hospitals />
+                        </ProtectedRoute>
+                    } />
+
+                    <Route path="/transport" element={
+                        <ProtectedRoute roles={['ADMIN', 'HOSPITAL']}>
+                            <TransportManagement />
                         </ProtectedRoute>
                     } />
 

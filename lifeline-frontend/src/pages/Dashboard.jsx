@@ -28,6 +28,7 @@ const Dashboard = () => {
         ...(canViewInventory ? [{ title: 'Inventory Command', desc: 'Monitor stock, queues, and dispatch readiness.', path: '/inventory', color: '#DC2626', icon: '🩸' }] : []),
         ...(canViewLab ? [{ title: 'Lab Screening', desc: 'Process test results before units enter inventory.', path: '/lab', color: '#2563EB', icon: '🧪' }] : []),
         ...(canCreateHospitalRequest ? [{ title: 'Hospital Requests', desc: 'Create and track routine or emergency demand.', path: '/emergency', color: '#7C3AED', icon: '🏥' }] : []),
+        ...(canCreateHospitalRequest || canManageCredentials ? [{ title: 'Transport Control', desc: 'Manage vehicles, delivery routing, and transport visibility.', path: '/transport', color: '#2563EB', icon: '🚑' }] : []),
         ...(canManageCredentials ? [{ title: 'Staff Access', desc: 'Manage users, permissions, and account roles.', path: '/credentials', color: '#0F766E', icon: '🛡️' }] : []),
         ...(canManageCredentials ? [{ title: 'Hospitals', desc: 'Maintain partner hospitals and service coverage.', path: '/hospitals', color: '#0EA5E9', icon: '🏨' }] : []),
         { title: 'Donor Network', desc: 'Track donors, safety history, and registrations.', path: '/donors', color: '#10B981', icon: '💚' },
